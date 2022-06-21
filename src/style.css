@@ -1,0 +1,90 @@
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: 'Noto Serif', serif;
+    color: var(--font-color);
+    background-image: url('../src/parmo.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  :root {
+    --font-color: #eee;
+    --font-color-dark: #aaa;
+    --border-color: #222;
+    --background-light: rgba(0, 0, 0, 0.6);
+    --background-light-hover: rgba(99, 99, 99, 0.4);
+    --background-dark: rgba(0, 0, 0, 0.9);
+
+  }
+
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem 0;
+  background-color: var(--background-dark);
+  border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+  font-size: 3rem;
+}
+    /* Style tab links */
+  .tablink {
+      padding: 1.5rem;
+      font-size: 1.5rem;
+      background-color: transparent;
+      border-bottom: 2px solid transparent;
+      transition: transform 3s;
+      color: var(--font-color);
+  }
+
+
+  .tablink:hover {
+    background-color: var(--background-light-hover);
+  }
+
+  .tabcontent {
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+  }
+
+  #intro, #menu, #contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: var(--background-light);
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4rem;
+    animation: 'fadeIn 1.5s';
+  }
+
+  .menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    padding: 4rem;
+    cursor: pointer;
+    background-color: var(--background-light);
+    transition: background-color 0.3s;
+}
